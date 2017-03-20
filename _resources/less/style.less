@@ -1,0 +1,72 @@
+body {
+  background-color:#444;
+  color:#ffffff;
+  //background-image:url('/assets/images/bajin_1_color_invert_trans.png');
+  //background-position:center center;
+  //background-repeat:no-repeat;
+  //background-attachment: fixed;
+  //background-size:cover;
+  padding:0;
+  margin:0;
+}
+/* Really i want the EXACT opposite image -- the features as a color and the background transparent.
+even better would be some kind of CSS drawing that i could set the foreground for too!
+ */
+
+@font-face { font-family: Rockwell;
+  src: url('../fonts/Rockwell.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Rockwell.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/Rockwell.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/Rockwell.ttf')  format('truetype') /* Safari, Android, iOS */
+}
+
+@font-face { font-family: Rockwell_Extra_Bold;
+  src: url('../fonts/Rockwell_Extra_Bold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Rockwell_Extra_Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/Rockwell_Extra_Bold.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/Rockwell_Extra_Bold.ttf')  format('truetype') /* Safari, Android, iOS */
+}
+
+*{
+  font-family:Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h1,h1 *, h1 *  h2,h2 *, h3,h3 *, h4,h4 *, h5,h5 *, h6, h6 * ,.top_menu_bar a,.top_menu_bar .submit{
+  font-weight:normal;
+  font-family:Rockwell_Extra_Bold,Rockwell,Baskerville, "Times New Roman", Times, serif
+}
+
+header{
+  text-align:center;
+  h1 {
+    text-transform: uppercase;
+    text-shadow: 5px 5px 5px black;
+    font-size: 7.1em;
+    letter-spacing: 32px;
+    margin: 0px 0px 3px 20px;
+    padding: 0px;
+    line-height: 1.06em;
+    div.bajins {
+      font-size: 1.7em;
+    }
+  }
+}
+nav{
+  padding:10px 0;
+  .nav-wrapper{
+    margin:10px 0;
+    background-color:black;
+    border:1px solid #888;
+    border-left:none;
+    border-right:none;
+    float:none;
+    overflow:hidden;
+    ul{
+      float:right;
+      li{
+        float:left;
+        list-style:none;
+        margin: 0 10px;
+      }
+    }
+  }
+}
