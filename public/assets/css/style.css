@@ -89,6 +89,8 @@ header nav .nav-wrapper {
 header nav .nav-wrapper ul {
   display: inline-block;
   width: 50%;
+  /*/ border:1px solid yellow; /*/
+
   padding: 0;
   margin: 0;
   float: none;
