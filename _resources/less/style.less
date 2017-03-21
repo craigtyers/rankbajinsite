@@ -1,11 +1,11 @@
 body {
   background-color:#444;
   color:#ffffff;
-  //background-image:url('/assets/images/bajin_1_color_invert_trans.png');
-  //background-position:center center;
-  //background-repeat:no-repeat;
-  //background-attachment: fixed;
-  //background-size:cover;
+  background-image:url('/assets/images/bajin_1_color_invert_trans.png');
+  background-position:bottom right;
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-size:15%;
   padding:0;
   margin:0;
 }
@@ -14,29 +14,42 @@ even better would be some kind of CSS drawing that i could set the foreground fo
  */
 
 @font-face { font-family: Rockwell;
-  src: url('../fonts/Rockwell.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/Rockwell.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../fonts/Rockwell.woff') format('woff'), /* Modern Browsers */
-  url('../fonts/Rockwell.ttf')  format('truetype') /* Safari, Android, iOS */
+  src: url('../fonts/Rockwell.eot');                                      /* IE9 Compat Modes */
+  src: url('../fonts/Rockwell.eot?#iefix') format('embedded-opentype'),   /* IE6-IE8 */
+  url('../fonts/Rockwell.woff') format('woff'),                           /* Modern Browsers */
+  url('../fonts/Rockwell.ttf')  format('truetype')                        /* Safari, Android, iOS */
 }
 
-@font-face { font-family: Rockwell_Extra_Bold;
-  src: url('../fonts/Rockwell_Extra_Bold.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/Rockwell_Extra_Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../fonts/Rockwell_Extra_Bold.woff') format('woff'), /* Modern Browsers */
-  url('../fonts/Rockwell_Extra_Bold.ttf')  format('truetype') /* Safari, Android, iOS */
+@font-face { font-family: RockwellExtraBold;
+  src: url('../fonts/RockwellExtraBold.eot');                                     /* IE9 Compat Modes */
+  src: url('../fonts/RockwellExtraBold.eot?#iefix') format('embedded-opentype'),  /* IE6-IE8 */
+  url('../fonts/RockwellExtraBold.woff') format('woff'),                          /* Modern Browsers */
+  url('../fonts/RockwellExtraBold.ttf')  format('truetype')                       /* Safari, Android, iOS */
 }
 
 *{
-  font-family:Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT",
+  "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L",
+  Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 h1,h1 *, h1 *  h2,h2 *, h3,h3 *, h4,h4 *, h5,h5 *, h6, h6 * ,.top_menu_bar a,.top_menu_bar .submit{
   font-weight:normal;
-  font-family:Rockwell_Extra_Bold,Rockwell,Baskerville, "Times New Roman", Times, serif
+  font-family:RockwellExtraBold,Rockwell,Baskerville, "Times New Roman", Times, serif
 }
 
-header{
-  text-align:center;
+/*/ global settings /*/
+
+a{
+  color:navy;
+  &:hover{
+    color:red;
+    text-decoration:underline;
+  }
+}
+
+header {
+  text-align: center;
+
   h1 {
     text-transform: uppercase;
     text-shadow: 5px 5px 5px black;
@@ -45,27 +58,58 @@ header{
     margin: 0px 0px 3px 20px;
     padding: 0px;
     line-height: 1.06em;
+    z-index: 2000;
     div.bajins {
       font-size: 1.7em;
     }
   }
-}
-nav{
-  padding:10px 0;
-  .nav-wrapper{
-    margin:10px 0;
-    background-color:black;
-    border:1px solid #888;
-    border-left:none;
-    border-right:none;
-    float:none;
-    overflow:hidden;
-    ul{
-      float:right;
-      li{
-        float:left;
-        list-style:none;
-        margin: 0 10px;
+  nav {
+    z-index: 1000;
+    padding: 10px 0;
+    .nav-wrapper {
+      margin: 0;
+      background-color: black;
+      border: 1px solid #888;
+      border-left: none;
+      border-right: none;
+      float: none;
+      overflow: hidden;
+      text-align: center;
+      ul {
+        display: inline-block;
+        width: 50%;
+       // border:1px solid yellow;
+        padding: 0;
+        margin: 0;
+        float: none;
+        overflow: hidden;
+        li {
+          float: left;
+          list-style: none;
+          width: 25%;
+          text-align: left;
+          a {
+            //border-width: 0 1px 1px 1px;
+            //border-color:#555;
+            //border-style:solid;
+            display: block;
+            margin: 10px 1px;
+            padding:10px;
+            color: #e0e0e0;
+            text-decoration: none;
+            &:hover {
+              background-color: #777;
+              color: #f8f8f8;
+            }
+          }
+          &:first-child a{
+            border-radius:5px 0 0 5px;
+          }
+
+          &:last-child a{
+            border-radius: 0 5px 5px 0;
+          }
+        }
       }
     }
   }

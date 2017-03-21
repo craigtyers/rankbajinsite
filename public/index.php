@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>The rank bajins : Purveyors of good time music</title>
-        <link rel="stylesheet" href ="assets/css/style.css" />
+        <link rel="stylesheet" href ="assets/css/style.css?refresh=<?=time();?>" />
     </head>
     <body>
     <header>
@@ -10,10 +10,10 @@
         <nav>
             <div class="nav-wrapper">
                 <ul>
-                    <li>Who?</li>
-                    <li>What?</li>
-                    <li>Where?</li>
-                    <li>When?</li>
+                    <li><a href="#who">Who?</a></li>
+                    <li><a href="#what">What?</a></li>
+                    <li><a href="#where">Where?</a></li>
+                    <li><a href="#when">When?</a></li>
                 </ul>
             </div>
         </nav>

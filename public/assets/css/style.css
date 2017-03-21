@@ -1,6 +1,11 @@
 body {
   background-color: #444;
   color: #ffffff;
+  background-image: url('/assets/images/bajin_1_color_invert_trans.png');
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 15%;
   padding: 0;
   margin: 0;
 }
@@ -16,11 +21,11 @@ even better would be some kind of CSS drawing that i could set the foreground fo
   ;/* IE9 Compat Modes */
 }
 @font-face {
-  font-family: Rockwell_Extra_Bold;
-  src: url('../fonts/Rockwell_Extra_Bold.eot');
-  src: url('../fonts/Rockwell_Extra_Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-   url('../fonts/Rockwell_Extra_Bold.woff') format('woff'), /* Modern Browsers */
-   url('../fonts/Rockwell_Extra_Bold.ttf') format('truetype') /* Safari, Android, iOS */
+  font-family: RockwellExtraBold;
+  src: url('../fonts/RockwellExtraBold.eot');
+  src: url('../fonts/RockwellExtraBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+   url('../fonts/RockwellExtraBold.woff') format('woff'), /* Modern Browsers */
+   url('../fonts/RockwellExtraBold.ttf') format('truetype') /* Safari, Android, iOS */
   ;/* IE9 Compat Modes */
 }
 * {
@@ -41,7 +46,15 @@ h6 *,
 .top_menu_bar a,
 .top_menu_bar .submit {
   font-weight: normal;
-  font-family: Rockwell_Extra_Bold, Rockwell, Baskerville, "Times New Roman", Times, serif;
+  font-family: RockwellExtraBold, Rockwell, Baskerville, "Times New Roman", Times, serif;
+}
+/*/ global settings /*/
+a {
+  color: navy;
+}
+a:hover {
+  color: red;
+  text-decoration: underline;
 }
 header {
   text-align: center;
@@ -54,27 +67,53 @@ header h1 {
   margin: 0px 0px 3px 20px;
   padding: 0px;
   line-height: 1.06em;
+  z-index: 2000;
 }
 header h1 div.bajins {
   font-size: 1.7em;
 }
-nav {
+header nav {
+  z-index: 1000;
   padding: 10px 0;
 }
-nav .nav-wrapper {
-  margin: 10px 0;
+header nav .nav-wrapper {
+  margin: 0;
   background-color: black;
   border: 1px solid #888;
   border-left: none;
   border-right: none;
   float: none;
   overflow: hidden;
+  text-align: center;
 }
-nav .nav-wrapper ul {
-  float: right;
+header nav .nav-wrapper ul {
+  display: inline-block;
+  width: 50%;
+  padding: 0;
+  margin: 0;
+  float: none;
+  overflow: hidden;
 }
-nav .nav-wrapper ul li {
+header nav .nav-wrapper ul li {
   float: left;
   list-style: none;
-  margin: 0 10px;
+  width: 25%;
+  text-align: left;
+}
+header nav .nav-wrapper ul li a {
+  display: block;
+  margin: 10px 1px;
+  padding: 10px;
+  color: #e0e0e0;
+  text-decoration: none;
+}
+header nav .nav-wrapper ul li a:hover {
+  background-color: #777;
+  color: #f8f8f8;
+}
+header nav .nav-wrapper ul li:first-child a {
+  border-radius: 5px 0 0 5px;
+}
+header nav .nav-wrapper ul li:last-child a {
+  border-radius: 0 5px 5px 0;
 }
